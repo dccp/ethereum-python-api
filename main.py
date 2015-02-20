@@ -90,3 +90,6 @@ def eth_transact(code):
 def eth_call(to, data):
     return sendJSONRequest("eth_call", json.dumps({"to":to, "data":data}))
 
+def eth_flush():
+    return sendJSONRequest("eth_flush")
+
