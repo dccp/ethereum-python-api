@@ -45,3 +45,6 @@ def eth_accounts(client=None):
 def eth_peerCount():
     return sendJSONRequest("eth_peerCount")
 
+def eth_defaultBlock():
+    sendJSONRequest("eth_defaultBlock")
+
