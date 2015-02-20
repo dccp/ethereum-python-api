@@ -127,3 +127,8 @@ def eth_solidity(contract):
 #def eth_serpent(contract):
 #    return sendJSONRequest("eth_serpent", contract)
 
+# TODO: test
+def eth_newFilter(topic):
+    return sendJSONRequest("eth_newFilter", json.dumps({"topic":topic}))
+
+
