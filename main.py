@@ -42,3 +42,6 @@ def eth_gasPrice():
 def eth_accounts(client=None):
     return sendJSONRequest("eth_accounts", client)
 
+def eth_peerCount():
+    return sendJSONRequest("eth_peerCount")
+
