@@ -131,6 +131,10 @@ def eth_solidity(contract):
 def eth_newFilter(topic):
     return sendJSONRequest("eth_newFilter", json.dumps({"topic":topic}))
 
+# TODO: test
 def eth_newFilterString(string):
     return sendJSONRequest("eth_newFilterString", string)
 
+# TODO: test
+def eth_uninstallFilter(id):
+    return sendJSONRequest("eth_uninstallFilter", id)
