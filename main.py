@@ -151,3 +151,6 @@ def eth_logs(topic):
 def eth_getWork():
     return sendJSONRequest("eth_getWork")
 
+def eth_submitWork(work):
+    return sendJSONRequest("eth_submitWork", work)
+
