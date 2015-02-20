@@ -138,3 +138,7 @@ def eth_newFilterString(string):
 # TODO: test
 def eth_uninstallFilter(id):
     return sendJSONRequest("eth_uninstallFilter", id)
+
+def eth_changed(id):
+    return sendJSONRequest("eth_changed", id)
+
