@@ -97,3 +97,6 @@ def eth_flush():
 def eth_blockByHash(hash):
     return sendJSONRequest("eth_blockByHash", hash)
 
+def eth_blockByNumber(number):
+    return sendJSONRequest("eth_blockByNumber", number)
+
