@@ -1,5 +1,6 @@
 import json, requests
 
+# TODO: Make smarter id generator
 def getRPCId():
     return 1
 
