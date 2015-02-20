@@ -111,3 +111,7 @@ def eth_transactionByNumber(number, index):
 # TODO: test
 def eth_uncleByHash(hash, index):
     return sendJSONRequest("eth_uncleByHash", hash, index)
+
+def eth_uncleByNumber(number, index):
+    return sendJSONRequest("eth_uncleByNumber", number, index)
+
