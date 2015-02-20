@@ -120,3 +120,6 @@ def eth_compilers():
 
 # TODO: def eth_lll():
 
+def eth_solidity(contract):
+    return sendJSONRequest("eth_solidity", contract)
+
