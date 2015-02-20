@@ -118,3 +118,5 @@ def eth_uncleByNumber(number, index):
 def eth_compilers():
     return sendJSONRequest("eth_compilers")
 
+# TODO: def eth_lll():
+
