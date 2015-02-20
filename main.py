@@ -76,3 +76,6 @@ def eth_transactionCountByNumber(number):
 def eth_uncleCountByHash(hash):
     return sendJSONRequest("eth_uncleCountByHash", hash)
 
+def eth_uncleCountByNumber(number):
+    return sendJSONRequest("eth_uncleCountByNumber", number)
+
