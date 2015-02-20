@@ -145,3 +145,6 @@ def eth_changed(id):
 def eth_filterLogs(id):
     return sendJSONRequest("eth_filterLogs", id)
 
+def eth_logs(topic):
+    return sendJSONRequest("eth_logs", json.dumps({"topic":topic}))
+
