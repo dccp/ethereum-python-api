@@ -93,10 +93,15 @@ def eth_call(to, data):
 def eth_flush():
     return sendJSONRequest("eth_flush")
 
-# TODO: test
+# TODO: Not working :(
 def eth_blockByHash(hash):
     return sendJSONRequest("eth_blockByHash", hash)
 
 def eth_blockByNumber(number):
     return sendJSONRequest("eth_blockByNumber", number)
+
+# TODO: test
+def eth_transactionByHash(hash, index):
+    return sendJSONRequest("eth_transactionByHash", hash, index)
+
 
