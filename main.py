@@ -44,3 +44,6 @@ def eth_setMining(mining):
 def eth_gasPrice():
     return sendJSONRequest("eth_gasPrice")
 
+def eth_accounts(client=None):
+    return sendJSONRequest("eth_accounts", [client])
+
