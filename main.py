@@ -104,4 +104,8 @@ def eth_blockByNumber(number):
 def eth_transactionByHash(hash, index):
     return sendJSONRequest("eth_transactionByHash", hash, index)
 
+# Exception?
+def eth_transactionByNumber(number, index):
+    return sendJSONRequest("eth_transactionByNumber", number, index)
+
 
