@@ -67,3 +67,6 @@ def eth_storageAt(address):
 def eth_countAt(address):
     return sendJSONRequest("eth_countAt", address)
 
+def eth_transactionCountByHash(hash):
+    return sendJSONRequest("eth_transactionCountByHash", hash)
+
