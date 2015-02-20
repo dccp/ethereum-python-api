@@ -64,3 +64,6 @@ def eth_stateAt(address, index):
 def eth_storageAt(address):
     return sendJSONRequest("eth_storageAt", address)
 
+def eth_countAt(address):
+    return sendJSONRequest("eth_countAt", address)
+
