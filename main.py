@@ -46,13 +46,13 @@ def eth_peerCount():
     return sendJSONRequest("eth_peerCount")
 
 def eth_defaultBlock():
-    sendJSONRequest("eth_defaultBlock")
+    return sendJSONRequest("eth_defaultBlock")
 
 def eth_setDefaultBlock(block):
-    sendJSONRequest("eth_setDefaultBlock", block)
+    return sendJSONRequest("eth_setDefaultBlock", block)
 
 def eth_number():
-    sendJSONRequest("eth_number")
+    return sendJSONRequest("eth_number")
 
 def eth_balanceAt(address):
     return sendJSONRequest("eth_balanceAt", address)
