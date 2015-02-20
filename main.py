@@ -15,20 +15,25 @@ def sendJSONRequest(method, params):
 def eth_coinbase():
     return sendJSONRequest("eth_coinbase", [])
 
-def eth_setCoinbase(coinbase): # Not implemented 150220
+
+# Not implemented 150220 in go-ethereum
+# Implemented in cpp-ethereum
+def eth_setCoinbase(coinbase):
     return sendJSONRequest("eth_setCoinbase", [coinbase])
 
 def eth_listening():
     return sendJSONRequest("eth_listening", [])
 
-def eth_setListening(listen): # Not implemented 150220
+# Not implemented 150220 in go-ethereum
+# Implemented in cpp-ethereum
+def eth_setListening(listen): 
     return sendJSONRequest("eth_setListening", [listen])
 
 def eth_mining():
     return sendJSONRequest("eth_mining", [])
 
+# Not implemented 150220 in go-ethereum
+# Implemented in cpp-ethereum
 def eth_setMining(mining):
     return sendJSONRequest("eth_setMining", [mining])
 
-print eth_setMining(True)
-print eth_mining()
