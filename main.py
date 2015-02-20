@@ -14,4 +14,7 @@ def eth_coinbase():
 def eth_setCoinbase(coinbase): # Not implemented 150220
     return sendJSONRequest("eth_setCoinbase", [coinbase])
 
-print eth_coinbase()
+def eth_listening():
+    return sendJSONRequest("eth_listening", [])
+
+print eth_listening()
