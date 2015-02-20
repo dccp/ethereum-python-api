@@ -148,3 +148,6 @@ def eth_filterLogs(id):
 def eth_logs(topic):
     return sendJSONRequest("eth_logs", json.dumps({"topic":topic}))
 
+def eth_getWork():
+    return sendJSONRequest("eth_getWork")
+
