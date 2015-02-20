@@ -57,3 +57,7 @@ def eth_number():
 def eth_balanceAt(address):
     return sendJSONRequest("eth_balanceAt", address)
 
+# Not working :( TODO:
+def eth_stateAt(address, index):
+    return sendJSONRequest("eth_stateAt", address, index)
+
