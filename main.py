@@ -27,5 +27,8 @@ def eth_setListening(listen): # Not implemented 150220
 def eth_mining():
     return sendJSONRequest("eth_mining", [])
 
-#print eth_setListening(True)
+def eth_setMining(mining):
+    return sendJSONRequest("eth_setMining", [mining])
+
+print eth_setMining(True)
 print eth_mining()
