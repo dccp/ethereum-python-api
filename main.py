@@ -48,3 +48,6 @@ def eth_peerCount():
 def eth_defaultBlock():
     sendJSONRequest("eth_defaultBlock")
 
+def eth_setDefaultBlock(block):
+    sendJSONRequest("eth_setDefaultBlock", block)
+
