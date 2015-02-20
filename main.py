@@ -70,3 +70,6 @@ def eth_countAt(address):
 def eth_transactionCountByHash(hash):
     return sendJSONRequest("eth_transactionCountByHash", hash)
 
+def eth_transactionCountByNumber(number):
+    return sendJSONRequest("eth_transactionCountByNumber", number)
+
