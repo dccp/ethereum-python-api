@@ -123,3 +123,7 @@ def eth_compilers():
 def eth_solidity(contract):
     return sendJSONRequest("eth_solidity", contract)
 
+# TODO: test when implemented in ethereum
+#def eth_serpent(contract):
+#    return sendJSONRequest("eth_serpent", contract)
+
