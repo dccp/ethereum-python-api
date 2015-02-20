@@ -79,3 +79,6 @@ def eth_uncleCountByHash(hash):
 def eth_uncleCountByNumber(number):
     return sendJSONRequest("eth_uncleCountByNumber", number)
 
+def eth_codeAt(address):
+    return sendJSONRequest("eth_codeAt", address)
+
