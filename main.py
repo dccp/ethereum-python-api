@@ -142,3 +142,6 @@ def eth_uninstallFilter(id):
 def eth_changed(id):
     return sendJSONRequest("eth_changed", id)
 
+def eth_filterLogs(id):
+    return sendJSONRequest("eth_filterLogs", id)
+
