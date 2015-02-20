@@ -51,3 +51,6 @@ def eth_defaultBlock():
 def eth_setDefaultBlock(block):
     sendJSONRequest("eth_setDefaultBlock", block)
 
+def eth_number():
+    sendJSONRequest("eth_number")
+
