@@ -115,3 +115,6 @@ def eth_uncleByHash(hash, index):
 def eth_uncleByNumber(number, index):
     return sendJSONRequest("eth_uncleByNumber", number, index)
 
+def eth_compilers():
+    return sendJSONRequest("eth_compilers")
+
