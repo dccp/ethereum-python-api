@@ -26,8 +26,8 @@ def eth_listening():
 
 # Not implemented 150220 in go-ethereum
 # Implemented in cpp-ethereum
-def eth_setListening(listen): 
-    return sendJSONRequest("eth_setListening", [listen])
+def eth_setListening(listening):
+    return sendJSONRequest("eth_setListening", [listening])
 
 def eth_mining():
     return sendJSONRequest("eth_mining", [])
