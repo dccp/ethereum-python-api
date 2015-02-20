@@ -86,4 +86,7 @@ def eth_codeAt(address):
 def eth_transact(code):
     return sendJSONRequest("eth_transact", json.dumps({"code":code}))
 
+# TODO: test
+def eth_call(to, data):
+    return sendJSONRequest("eth_call", json.dumps({"to":to, "data":data}))
 
