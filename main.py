@@ -82,3 +82,8 @@ def eth_uncleCountByNumber(number):
 def eth_codeAt(address):
     return sendJSONRequest("eth_codeAt", address)
 
+# TODO: test
+def eth_transact(code):
+    return sendJSONRequest("eth_transact", json.dumps({"code":code}))
+
+
