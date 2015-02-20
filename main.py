@@ -3,7 +3,12 @@ import json, requests
 def getRPCId():
     return 1
 
-def sendJSONRequest(method, params):
+def sendJSONRequest(method, *params):
+    if len(params) == 0:
+        params = []
+    else:
+        params = params[0]
+
     data = json.dumps({"jsonrpc":"2.0", "method":method, "params":params, "id":getRPCId()})
     response = requests.post("http://localhost:1337", data=data)
     jsondata = response.json()
@@ -13,8 +18,7 @@ def sendJSONRequest(method, params):
         return jsondata['error']
 
 def eth_coinbase():
-    return sendJSONRequest("eth_coinbase", [])
-
+    return sendJSONRequest("eth_coinbase")
 
 # Not implemented 150220 in go-ethereum
 # Implemented in cpp-ethereum
@@ -22,7 +26,7 @@ def eth_setCoinbase(coinbase):
     return sendJSONRequest("eth_setCoinbase", [coinbase])
 
 def eth_listening():
-    return sendJSONRequest("eth_listening", [])
+    return sendJSONRequest("eth_listening")
 
 # Not implemented 150220 in go-ethereum
 # Implemented in cpp-ethereum
@@ -30,10 +34,13 @@ def eth_setListening(listening):
     return sendJSONRequest("eth_setListening", [listening])
 
 def eth_mining():
-    return sendJSONRequest("eth_mining", [])
+    return sendJSONRequest("eth_mining")
 
 # Not implemented 150220 in go-ethereum
 # Implemented in cpp-ethereum
 def eth_setMining(mining):
     return sendJSONRequest("eth_setMining", [mining])
+
+def eth_gasPrice():
+    return sendJSONRequest("eth_gasPrice")
 
