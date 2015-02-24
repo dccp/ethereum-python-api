@@ -5,7 +5,6 @@ class EthereumJSON:
     def __init__(self):
         self.id = 0
 
-    # TODO: Make smarter id generator
     def _getId(self):
         self.id += 1
         return self.id
