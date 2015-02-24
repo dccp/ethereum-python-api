@@ -8,7 +8,6 @@ class WhisperAPI:
     def newIdentity(self):
         return self.json._sendJSONRequest("shh_newIdentity")
 
-
     def haveIdentity(self, identity):
         return self.json._sendJSONRequest("shh_haveIdentity", identity)
 
@@ -22,18 +21,9 @@ class WhisperAPI:
     def newFilter(self, topic): 
         return self.json._sendJSONRequest("shh_newFilter", {"topic":topic})
 
+    def uninstallFilter(self, filter_id):
+    	return self.json._sendJSONRequest("shh_uninstallFilter", filter_id)
+
         # Not implemented in cpp-ethereum 150224
     def getMessages(self, filter_id):
         return self.json._sendJSONRequest("shh_getMessages", filter_id)
-    
-eth = WhisperAPI()
-identity = eth.newIdentity()
-print eth.haveIdentity(identity)
-filter = eth.newFilter("0x68656c6c6f20776f726c64")
-print filter
-print eth.post(identity, "0x68656c6c6f20776f726c64", "0x68656c6c6f20776f726c64", 100, 100)
-print eth.post(identity, "0x68656c6c6f20776f726c64", "0x68656c6c6f20776f726c64", 100, 100)
-print eth.post(identity, "0x68656c6c6f20776f726c64", "0x68656c6c6f20776f726c64", 100, 100)
-print eth.post(identity, "0x68656c6c6f20776f726c64", "0x68656c6c6f20776f726c64", 100, 100)
-print eth.changed(filter)
-print eth.getMessages(filter)
